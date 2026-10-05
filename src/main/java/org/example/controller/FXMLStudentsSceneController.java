@@ -34,6 +34,11 @@ public class FXMLStudentsSceneController {
     }
 
     @FXML
+    void handleChangeButtonPressed(ActionEvent event) {
+        nameLabel.setText("John Smith");
+    }
+
+    @FXML
     void handleButtonClick(ActionEvent event) {
         if (seasonsLabel.getText().equals("Winter"))
             seasonsLabel.setText("Summer");
