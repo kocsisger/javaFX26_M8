@@ -26,7 +26,7 @@ public class FXMLStudentsSceneController {
     private Label nameLabel;
 
     @FXML
-    void handleLoadButtonPressed(ActionEvent event) {
+    void handleLoadButtonPressed() {
         nameLabel.setText(model.getStudent().getName());
         creditsLabel.setText("" + model.getStudent().getCredits());
         dateOfBirthLabel.setText(model.getStudent().getDateOfBirth().toString());
@@ -35,7 +35,8 @@ public class FXMLStudentsSceneController {
 
     @FXML
     void handleChangeButtonPressed(ActionEvent event) {
-        nameLabel.setText("John Smith");
+        model.getStudent().setName("John Smith");
+        handleLoadButtonPressed();
     }
 
     @FXML
